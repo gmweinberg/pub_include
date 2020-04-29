@@ -1,0 +1,9 @@
+[MESSAGES CONTROL]
+disable=R,C,W
+
+[REPORTS]
+score=no
+
+[TYPECHECK]
+ignored-modules=MySQLdb,scss,cherrypy
+
