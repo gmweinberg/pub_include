@@ -1,4 +1,4 @@
-export PATH=${PATH}:${HOME}/bin
+export PATH=${PATH}:${HOME}/bin:${HOME}/pub_bin
 
 alias cddw="cd ${HOME}/Downloads"
 alias cdrg="cd /run/media/${USER}"
