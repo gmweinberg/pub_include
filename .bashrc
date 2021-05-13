@@ -2,6 +2,7 @@ export PATH=${PATH}:${HOME}/bin:${HOME}/pub_bin
 
 alias cddw="cd ${HOME}/Downloads"
 alias cdrg="cd /run/media/${USER}"
+alias hist20="history | tail -n 20"
 alias pyl="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
 alias pyl3="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
 alias pyl2="pylint --rcfile=$HOME/pub_include/.pylintrc"
