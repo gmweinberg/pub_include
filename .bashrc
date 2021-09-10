@@ -11,6 +11,7 @@ alias rnaut="nautilus --browser --no-desktop &"
 
 alias randstring="openssl rand -base64 32"
 alias timestamp="date +%s"
+alias yesterday="expr $(date +%s) - 86400"
 alias gitstat='git status | head -n 30'
 
 function greppy() { grep -n -r --include=*.py "$@" . ;}
