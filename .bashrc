@@ -8,6 +8,8 @@ alias pyl="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
 alias pyl3="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
 alias pyl2="pylint --rcfile=$HOME/pub_include/.pylintrc"
 alias pdb="python -m pdb $@"
+alias pdb2="python2 -m pdb $@"
+alias pdb3="python3 -m pdb $@"
 alias rnaut="nautilus --browser --no-desktop &"
 
 alias randstring="openssl rand -base64 32"
