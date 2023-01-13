@@ -15,6 +15,7 @@ alias timestamp="date +%s"
 alias gitstat='git status | head -n 30'
 
 function yesterday() { expr $(date +%s) - 86400 ;}
+function daysago() { expr $(date +%s) - 86400 * $1 ;}
 function greppy() { grep -n -r --include=*.py "$@" . ;}
 function grepdef() { grep -n -r -A 4 --include=*.py "def $1" . ;}
 function grepjs() { grep -n -r --include=*.js --include=*.html --exclude=jquery*js --exclude=modernizr*.js --exclude=concat_footer.js "$@" . ;}
