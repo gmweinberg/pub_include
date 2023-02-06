@@ -1,5 +1,6 @@
 export PATH=${PATH}:${HOME}/bin:${HOME}/pub_bin
 
+alias ccat="pygmentize"
 alias cddw="cd ${HOME}/Downloads"
 alias cdrg="cd /run/media/${USER}"
 alias hist20="history | tail -n 20"
