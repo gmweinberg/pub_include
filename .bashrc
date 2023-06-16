@@ -19,7 +19,7 @@ function  pdb() { python -m pdb "$@" ;}
 function  pdb2() { python2 -m pdb "$@" ;}
 function  pdb3() { python3 -m pdb "$@" ;}
 function yesterday() { expr $(date +%s) - 86400 ;}
-function daysago() { expr $(date +%s) - 86400 * $1 ;}
+function daysago() { expr $(date +%s) - 86400 "*" $1 ;}
 function greppy() { grep -n -r --include=*.py "$@" . ;}
 function grepdef() { grep -n -r -A 4 --include=*.py "def $1" . ;}
 function grepjs() { grep -n -r --include=*.js --include=*.html --exclude=jquery*js --exclude=modernizr*.js --exclude=concat_footer.js "$@" . ;}
