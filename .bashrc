@@ -15,6 +15,7 @@ alias randstring="openssl rand -base64 32"
 alias timestamp="date +%s"
 alias gitstat='git status | head -n 30'
 
+function jpretty() { cat "$1" | python -m json.tool ;}
 function  pdb() { python -m pdb "$@" ;}
 function  pdb2() { python2 -m pdb "$@" ;}
 function  pdb3() { python3 -m pdb "$@" ;}
