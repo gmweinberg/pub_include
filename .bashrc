@@ -25,7 +25,7 @@ function greppy() { grep -n -r --include=*.py "$@" . ;}
 function grepdef() { grep -n -r -A 4 --include=*.py "def $1" . ;}
 function grepjs() { grep -n -r --include=*.js --include=*.html --exclude=jquery*js --exclude=modernizr*.js --exclude=concat_footer.js "$@" . ;}
 function grepnr() { grep -n -r "$@" . ;}
-function grepfilter() { sed -nr "s/.*$1.*/\1/p" $2 ;} # https://stackoverflow.com/questions/58379142/grep-how-to-output-only-the-content-of-a-capturing-group
+function grepfilter() { sed -nr "s/.*$1.*/\1/p" $2 ;} # https://stackoverflow.com/questions/58379142/grep-how-to-output-only-the-content-of-a-capturing-group. sucks, use grepgroup.py instead
 function set-title() {
   if [[ -z "$ORIG" ]]; then
     ORIG=$PS1
