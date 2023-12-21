@@ -1,4 +1,7 @@
 export PATH=${PATH}:${HOME}/bin:${HOME}/pub_bin
+export EDITOR=vim
+export VISUAL=vim
+
 
 alias ccat="pygmentize"
 alias cddw="cd ${HOME}/Downloads"
