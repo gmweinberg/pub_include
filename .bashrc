@@ -5,6 +5,7 @@ export VISUAL=vim
 
 alias ccat="pygmentize"
 alias cddw="cd ${HOME}/Downloads"
+alias cddoc="cd ${HOME}/Documents"
 alias cdprj="cd ${HOME}/projects"
 alias cdrg="cd /run/media/${USER}"
 alias hist20="history | tail -n 20"
@@ -20,6 +21,7 @@ alias gitstat='git status | head -n 30'
 
 function untrail() { sed -i 's/[ \t]*$//' "$1" ;}
 
+function cdsrc() { cd "$1/src/$1" ;}
 function jpretty() { cat "$1" | python -m json.tool ;}
 function  pdb() { python -m pdb "$@" ;}
 function  pdb2() { python2 -m pdb "$@" ;}
