@@ -8,6 +8,7 @@ alias cddw="cd ${HOME}/Downloads"
 alias cddoc="cd ${HOME}/Documents"
 alias cdprj="cd ${HOME}/projects"
 alias cdrg="cd /run/media/${USER}"
+alias dirsize="du -sh * | sort -hr" # show size of all subdirs 
 alias hist20="history | tail -n 20"
 alias ls20="ls -altr | tail -n 20"
 alias pyl="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
