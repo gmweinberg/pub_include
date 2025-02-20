@@ -6,6 +6,7 @@ export VISUAL=vim
 alias ccat="pygmentize"
 alias cddw="cd ${HOME}/Downloads"
 alias cddoc="cd ${HOME}/Documents"
+alias cdno="cd ${HOME}/docs/notes"
 alias cdprj="cd ${HOME}/projects"
 alias cdrg="cd /run/media/${USER}"
 alias dirsize="du -sh * | sort -hr" # show size of all subdirs 
