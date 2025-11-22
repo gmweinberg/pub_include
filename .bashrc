@@ -6,6 +6,7 @@ export VISUAL=vim
 alias ccat="pygmentize"
 alias cddw="cd ${HOME}/Downloads"
 alias cddoc="cd ${HOME}/Documents"
+alias cdm2="cd ${HOME}/music2"
 alias cdno="cd ${HOME}/docs/notes"
 alias cdprj="cd ${HOME}/projects"
 alias cdrg="cd /run/media/${USER}"
@@ -24,12 +25,14 @@ alias gitstat='git status | head -n 30'
 function untrail() { sed -i 's/[ \t]*$//' "$1" ;}
 
 function cdsrc() { cd "$1/src/$1" ;}
+function clip2file() { xclip -o -selection clipboard > $1 ;}
 function jpretty() { cat "$1" | python -m json.tool ;}
 function  pdb() { python -m pdb "$@" ;}
 function  pdb2() { python2 -m pdb "$@" ;}
 function  pdb3() { python3 -m pdb "$@" ;}
 function yesterday() { expr $(date +%s) - 86400 ;}
 function daysago() { expr $(date +%s) - 86400 "*" $1 ;}
+function file2clip() { cat $1 | xclip -i  -selection clipboard ;}
 function greppy() { grep -n -r --include=*.py "$@" . ;}
 function grepdef() { grep -n -r -A 4 --include=*.py "def $1" . ;}
 function grepjs() { grep -n -r --include=*.js --include=*.html --exclude=jquery*js --exclude=modernizr*.js --exclude=concat_footer.js "$@" . ;}
@@ -42,4 +45,4 @@ function set-title() {
   TITLE="\[\e]2;$*\a\]"
   PS1=${ORIG}${TITLE}
 }
-
+function tsixty(){ export TIME=`expr 60 \* $1` ; echo "TIME=$TIME" ;}
