@@ -5,5 +5,5 @@ disable=R,C,W
 score=no
 
 [TYPECHECK]
-ignored-modules=MySQLdb,scss,cherrypy
+ignored-modules=MySQLdb,scss,cherrypy,pyspiel,torch
 

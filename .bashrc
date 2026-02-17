@@ -8,12 +8,12 @@ alias cddw="cd ${HOME}/Downloads"
 alias cddoc="cd ${HOME}/Documents"
 alias cdm2="cd ${HOME}/music2"
 alias cdno="cd ${HOME}/docs/notes"
-alias cdprj="cd ${HOME}/projects"
+# alias cdprj="cd ${HOME}/projects"
 alias cdrg="cd /run/media/${USER}"
 alias dirsize="du -sh * | sort -hr" # show size of all subdirs 
 alias hist20="history | tail -n 20"
 alias ls20="ls -altr | tail -n 20"
-alias pyl="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
+alias pyl="python -m pylint --rcfile=$HOME/pub_include/.pylintrc"
 alias pyl3="pylint-3 --rcfile=$HOME/pub_include/.pylintrc"
 alias pyl2="pylint --rcfile=$HOME/pub_include/.pylintrc"
 alias rnaut="nautilus --browser --no-desktop &"
@@ -23,6 +23,23 @@ alias timestamp="date +%s"
 alias gitstat='git status | head -n 30'
 
 function untrail() { sed -i 's/[ \t]*$//' "$1" ;}
+function cdprj() {
+    local base="$HOME/projects"
+    if [ -z "$1" ]; then
+        cd "$base" || return
+    else
+        cd "$base/$1" || return
+    fi
+}
+cdhelper() {
+    local base="$HOME/prj_helper"
+    if [ -z "$1" ]; then
+        cd "$base" || return
+    else
+        cd "$base/$1" || return
+    fi
+}
+
 
 function cdsrc() { cd "$1/src/$1" ;}
 function clip2file() { xclip -o -selection clipboard > $1 ;}
